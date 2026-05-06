@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>js workout</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <h1>Learning JavaScript</h1>
+  <button id="add1" onclick=
+  "cart_items++;
+  document.querySelector('#list').innerText= `My list has ${cart_items} items`;
+  // alert('One Item added to list');
+  console.log(`cart quantity:${cart_items}`);">
+  Add to list</button>
+  
+  <button id="add2" onclick=
+  "cart_items+=2;
+  document.querySelector('#list').innerText= `My list has ${cart_items} items`;
+  // alert('Two items added to list');
+  console.log(`cart quantity:${cart_items}`);">
+  Add 2 to list</button>
+  
+  <button id="wish" onclick=
+  "if (cart_items > 0) { 
+  cart_items--;}
+  document.querySelector('#list').innerText= `My list has ${cart_items} items`;
+  // alert('One item added to wishlist');
+  console.log(`cart quantity:${cart_items}`);">
+  Add to wishlist</button>
+
+  <button class="reset" onclick="
+  cart_items = 0;
+  document.querySelector('#list').innerText= `My list has ${cart_items} items`;
+  console.log(`cart quantity:${cart_items}`);">
+  reset</button>
+  <h2 id="list"></h2>
+
+  <script src="script.js"></script>
+</body>
+</html>
