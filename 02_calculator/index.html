@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>js workout</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  
+  <h1>Calculator</h1> 
+  <div class="calculator">
+    <input type="text" id="display" placeholder="0" readonly>
+    <div class="buttons">
+       
+      <div class="btn-row">
+        <button class="btn clear" id="clear" onclick="
+        currentInput ='';
+        document.querySelector('#display').value = currentInput;
+        ">C</button>
+        <button class="btn operator" id="cut-btn" onclick="
+        currentInput = currentInput.slice(0, -1);
+        document.querySelector('#display').value = currentInput;
+        ">X</button>
+        <button class="btn operator" id="divide-btn" onclick="
+        currentInput += '/';
+        document.querySelector('#display').value = currentInput;
+        ">/</button>
+      </div>
+      
+      <div class="btn-row">
+        <button class="btn" id="7-btn" onclick="
+        currentInput += '7';
+        document.querySelector('#display').value = currentInput;
+        ">7</button>
+        <button class="btn" id="8-btn" onclick="
+        currentInput += '8';
+        document.querySelector('#display').value = currentInput;
+        ">8</button>
+        <button class="btn" id="9-btn" onclick="
+        currentInput += '9';
+        document.querySelector('#display').value = currentInput;
+        ">9</button>
+        <button class="btn operator" id="multiply-btn" onclick="
+        currentInput += '*';
+        document.querySelector('#display').value = currentInput;
+        ">*</button>
+      </div>
+      
+      <div class="btn-row">
+        <button class="btn" id="4-btn" onclick="
+        currentInput += '4';
+        document.querySelector('#display').value = currentInput;
+        ">4</button>
+        <button class="btn" id="5-btn" onclick="
+        currentInput += '5';
+        document.querySelector('#display').value = currentInput;
+        ">5</button>
+        <button class="btn" id="6-btn" onclick="
+        currentInput += '6';
+        document.querySelector('#display').value = currentInput;
+        ">6</button>
+        <button class="btn operator" id="subtract-btn" onclick="
+        currentInput += '-';
+        document.querySelector('#display').value = currentInput;
+        ">-</button>
+      </div>  
+      
+      <div class="btn-row">
+        <button class="btn" id="1-btn" onclick="
+        currentInput += '1';
+        document.querySelector('#display').value = currentInput;
+        ">1</button>
+        <button class="btn" id="2-btn" onclick="
+        currentInput += '2';
+        document.querySelector('#display').value = currentInput;
+        ">2</button>
+        <button class="btn" id="3-btn" onclick="
+        currentInput += '3';
+        document.querySelector('#display').value = currentInput;
+        ">3</button>
+        <button class="btn operator" id="add-btn" onclick="
+        currentInput += '+';
+        document.querySelector('#display').value = currentInput;
+        ">+</button>
+      </div>
+      
+      <div class="btn-row">
+        <button class="btn operator" id="decimal-btn" onclick="
+        currentInput += '.';
+        document.querySelector('#display').value = currentInput;
+        ">.</button>
+        <button class="btn" id="0-btn" onclick="
+        currentInput += '0';
+        document.querySelector('#display').value = currentInput;
+        ">0</button>
+        <button class="btn operator" id="equals-btn" onclick="
+        currentInput = eval(currentInput);
+        document.querySelector('#display').value = currentInput;
+        ">=</button>
+      </div>
+      
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>

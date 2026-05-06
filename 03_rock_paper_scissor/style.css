@@ -1,0 +1,34 @@
+button {
+  padding: 6px 10px;
+  font-size: 45px;
+  border: none;
+  background-color: rgba(141, 130, 130, 0.486);
+
+  border-radius: 5px;
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+button:hover {
+  background-color: rgba(141, 130, 130, 0.8);
+}
+button:active {
+  transform:scale(0.9) ;
+}
+
+.play-btn {
+  border-radius: 25px;
+}
+
+.reset-btn {
+  margin-top: 20px;
+  font-size: 18px;
+  background-color: #28204a;
+  color: white;
+}
+
+.reset-btn:hover {
+  color: #28204a;
+  background-color: white;
+  border: 1px solid #28204a;
+}
