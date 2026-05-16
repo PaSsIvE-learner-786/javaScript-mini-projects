@@ -38,58 +38,78 @@ javaScript-mini-projects/
 │   └── README.md
 │
 └── more-projects/
+```
 
-
-🚀 How to Run the Project
+## 🚀 How to Run the Project
 
 -Clone the repository
+
+```bash
     git clone https://github.com/PaSsIvE-learner-786/javaScript-mini-projects.git
+```
+
 -Open the project folder
+
+```bash
     cd javaScript-mini-projects/03_rock_paper_scissor
+```
+
 -Run the game
-    Simply open the index.html file in your browser.
+    Simply open the `index.html` file in your browser.
 
 
-🎯 Game Rules
+## 🎯 Game Rules
 
--Rock beats Scissors
--Scissors beats Paper
--Paper beats Rock
--If both player and computer choose the same option, the game ends in a draw.
+- Rock beats Scissors
+- Scissors beats Paper
+- Paper beats Rock
+- If both player and computer choose the same option, the game ends in a draw.
 
 
-📸 Screenshot
+## 📸 Screenshot
 
 ![alt text](image.png)
 
 
-💡 Future Improvements
+## 💡 Future Improvements
 
--Add sound effects
--Add animations
--Add difficulty levels
--Multiplayer mode
--Dark/light theme toggle
+- Add sound effects
+- Add animations
+- Add difficulty levels
+- Multiplayer mode
+- Dark/light theme toggle
 
 
-🤝 Contributing
+## 🤝 Contributing
 
     Contributions are welcome!
 
--Fork the project
--Create your feature branch
+- Fork the project
+- Create your feature branch
+
+```bash
     git checkout -b feature-name
--Commit your changes
+```
+
+- Commit your changes
+
+```bash
     git commit -m "Add new feature"
--Push to the branch
+```
+
+- Push to the branch
+
+```bash
     git push origin feature-name
--Open a Pull Request
+```
+
+- Open a Pull Request
 
 
-📄 License
+## 📄 License
 
 This project is licensed under the MIT License.
 
-👨‍💻 Author
+## 👨‍💻 Author
 
 Made with ❤️ by PaSsIvE-learner-786 using HTML, CSS, and JavaScript.
