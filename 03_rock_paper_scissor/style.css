@@ -51,9 +51,10 @@ div{
   gap: 5px;
 }
 
-.score-board {
-  align-items: start;
+.result-display{
+  gap: 10px;
 }
+
 .score-board .title{
   font-size: 18px;
   font-weight: bold;

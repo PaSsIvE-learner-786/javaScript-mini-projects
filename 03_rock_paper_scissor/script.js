@@ -7,14 +7,10 @@ let choice = document.getElementById("choice");
 let result = document.getElementById("result");
 
 
-let scoreTie = document.querySelector("#score-tie");
-let scoreWin = document.querySelector("#score-win");
-let scoreLose = document.querySelector("#score-lose");
+let scoreBoard = document.querySelector("#scoreBoard");
 
 function updateScore(){
-  scoreTie.textContent = score.tie;
-  scoreWin.textContent = score.win;
-  scoreLose.textContent = score.lose;
+  scoreBoard.textContent = `Win: ${score.win}  |  Lose: ${score.lose}  |  Tie: ${score.tie}`;
 }
 
 // as null  a fasly value we can use || operator to assign a default value to score if there is no score in local storage
