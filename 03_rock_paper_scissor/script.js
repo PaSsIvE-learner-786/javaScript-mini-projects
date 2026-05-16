@@ -92,8 +92,8 @@ function userPlay() {
     }
   }
   
-  choice.textContent = `You Chose: ${userChoice}  Computer Chose: ${computerChoice}`;
   result.textContent = content;
+  choice.textContent = `You ${userChoice}    |   ${computerChoice}Computer `;
   localStorage.setItem("score", JSON.stringify(score)); 
   updateScore();
 }
