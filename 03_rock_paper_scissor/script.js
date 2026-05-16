@@ -1,8 +1,9 @@
-let computerChoice = 0;
+'use strict';
+
+let computerChoice = "";
 let userChoice = "";
 
-let user = document.getElementById("user-choice");
-let computer = document.getElementById("computer-choice");
+let choice = document.getElementById("choice");
 let result = document.getElementById("result");
 
 
@@ -10,94 +11,91 @@ let scoreTie = document.querySelector("#score-tie");
 let scoreWin = document.querySelector("#score-win");
 let scoreLose = document.querySelector("#score-lose");
 
+function updateScore(){
+  scoreTie.textContent = score.tie;
+  scoreWin.textContent = score.win;
+  scoreLose.textContent = score.lose;
+}
+
 // as null  a fasly value we can use || operator to assign a default value to score if there is no score in local storage
 let score = JSON.parse(localStorage.getItem("score")) || {
   tie: 0,
   win: 0,
   lose: 0
 };
-
-scoreTie.textContent = score.tie;
-scoreWin.textContent = score.win;
-scoreLose.textContent = score.lose;
+updateScore();
 
 function userPlay() {
+
   function comChoice(){
-    choice = Math.floor(Math.random() * 3);
-    if (choice === 0) {
-      computer.textContent = '👊';
+    const compChoice = Math.floor(Math.random() * 3);
+    if (compChoice === 0) {
       return '👊';
     }
-    else if (choice === 1) {
-      computer.textContent = '✋';
+    else if (compChoice === 1) {
       return '✋';
     }
     else {
-      computer.textContent = '✌️';
       return '✌️';
     }
   }
   
   computerChoice = comChoice();
+
   let content = "";
   
   if (userChoice === "👊") {
-    user.textContent = '👊';
     
     if (computerChoice === "👊") {
-      content = 'It\'s a tie!';
+      content = "It's a tie!";
       score.tie++;
     }
     else if (computerChoice === "✋") {
-      content = 'You lose! Paper covers rock.';
+      content = "You lose! Paper covers rock.";
       score.lose++;
     }
     else {
-      content = 'You win! Rock crushes scissor.';
+      content = "You win! Rock crushes scissor.";
       score.win++;
     }
   }
   
   else if (userChoice === "✋") {
-    user.textContent = '✋';
     
     if (computerChoice === "✋") {
-      content = 'It\'s a tie!';
+      content = "It's a tie!";
       score.tie++;
     }
     else if (computerChoice === "✌️") {
-      content = 'You lose! Scissor cuts paper.';
+      content = "You lose! Scissor cuts paper.";
       score.lose++;
     }
     else {
-      content = 'You win! Paper covers rock.';
+      content = "You win! Paper covers rock.";
       score.win++;
     }
   }
   
   else{
-    user.textContent = '✌️';
-    
+
     if (computerChoice === "👊") {
-      content = 'You lose! Rock crushes scissor.';
+      content = "You lose! Rock crushes scissor.";
       score.lose++;
     }
     else if (computerChoice === "✋") {
-      content = 'You win! Scissor cuts paper.';
+      content = "You win! Scissor cuts paper.";
       score.win++;
     }
     else {
-      content = 'It\'s a tie!.';
+      content = "It's a tie!.";
       score.tie++;
     }
   }
   
+  choice.textContent = `You Chose: ${userChoice}  Computer Chose: ${computerChoice}`;
   result.textContent = content;
   localStorage.setItem("score", JSON.stringify(score)); 
-  
-  scoreTie.textContent = score.tie;
-  scoreWin.textContent = score.win;
-  scoreLose.textContent = score.lose;
+  updateScore();
 }
 
 function resetScore() {
@@ -107,9 +105,6 @@ function resetScore() {
     win: 0,
     lose: 0
   };
-  scoreTie.textContent = score.tie;
-  scoreWin.textContent = score.win;
-  scoreLose.textContent = score.lose;
-
+  updateScore();
   console.log("Score reset successfully.");
 }

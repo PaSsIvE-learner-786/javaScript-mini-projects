@@ -1,3 +1,66 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  height: 100vh;
+  background-color: #28204a;
+  color: white;
+}
+
+.game-title {
+  font-size: 34px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  padding: 10px 0 0 0;
+  left:0;
+  right: 0;
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #28204a;
+}
+
+div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+.play-area {
+  height: 500px;
+  width: 400px;
+  border-radius: 5px;
+  box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.212);
+  gap: 20px;
+}
+
+.play-btns {
+  flex-direction: row;
+  gap: 5px;
+}
+
+.score-board {
+  align-items: start;
+}
+.score-board .title{
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+
 button {
   padding: 6px 10px;
   font-size: 45px;
@@ -7,24 +70,29 @@ button {
   border-radius: 5px;
   cursor: pointer;
 
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
 }
+
 button:hover {
   background-color: rgba(141, 130, 130, 0.8);
+
 }
 button:active {
   transform:scale(0.9) ;
 }
 
+
 .play-btn {
   border-radius: 25px;
 }
+
 
 .reset-btn {
   margin-top: 20px;
   font-size: 18px;
   background-color: #28204a;
   color: white;
+  border: 1px solid white;
 }
 
 .reset-btn:hover {

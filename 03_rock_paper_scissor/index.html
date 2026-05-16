@@ -7,36 +7,40 @@
   <title>Document</title>
 </head>
 <body>
-  <h1>Rock Paper Scissor Game</h1>
+  <p class="game-title">Rock Paper Scissor Game</p>
+  <div class="play-area">
+    <div class="play-btns">
+      <button class="play-btn rock" onclick="
+      userChoice = '👊';
+      userPlay();
+      ">👊</button>
+      
+      <button class="play-btn paper" onclick="
+      userChoice = '✋';
+      userPlay();
+      ">✋</button>
   
-  <button class="play-btn rock" onclick="
-  userChoice = '👊';
-  userPlay();
-  ">👊</button>
+      <button class="play-btn scissor" onclick="
+      userChoice = '✌️';
+      userPlay();
+      ">✌️</button>
+    </div>
   
-  <button class="play-btn paper" onclick="
-  userChoice = '✋';
-  userPlay();
-  ">✋</button>
-
-  <button class="play-btn scissor" onclick="
-  userChoice = '✌️';
-  userPlay();
-  ">✌️</button>
-
-  <p>Your choice :<span id="user-choice"></span></p>
-  <p>Computer choice :<span id="computer-choice"></span></p>
-  <p id="result"></p>
-
-  <div>
-    <h3>Score</h3>
-    <p>Wins: <span id="score-win"></span></p>
-    <p>Losses: <span id="score-lose"></span></p>
-    <p>Ties: <span id="score-tie"></span></p>
+    <div class="result-display">
+      <p id="choice"></p>
+      <p id="result"></p>
+    </div>
+  
+    <div class="score-board">
+      <p class="title">Score</p>
+      <p>Wins: <span id="score-win"></span></p>
+      <p>Losses: <span id="score-lose"></span></p>
+      <p>Ties: <span id="score-tie"></span></p>
+    </div>
+  
+    <Script src="script.js"></Script>
+    <button class="reset-btn" onclick="resetScore();">Reset Score</button>
   </div>
-
-  <Script src="script.js"></Script>
-  <button class="reset-btn" onclick="resetScore();">Reset Score</button>
 
 </body>
 </html>
